@@ -1,9 +1,8 @@
-import React from 'react';
+import messageHoc from "./Hoc";
+import React from "react";
 
-const Message = (prop: {message: string}): any => {
-    return (
-        <p>{prop.message}</p>
-    );
-}
+const example = (props: any): any => <p>{props.name}, {props.message}</p>
+
+const Message = messageHoc(example);
 
 export default Message;
